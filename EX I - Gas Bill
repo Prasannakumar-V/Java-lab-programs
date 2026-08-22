@@ -71,7 +71,7 @@ class Gasbill {
     }
 }
 
-Output: 
+Output:
 
 ----- Gas Bill -----
 Consumer ID : 101
