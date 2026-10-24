@@ -1,0 +1,44 @@
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Game {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
+
+        int number = rand.nextInt(10) + 1;
+        int guess;
+
+        System.out.println("=== Number Guessing Game ===");
+        System.out.println("Guess a number between 1 and 10!");
+
+        do {
+            System.out.print("Enter your guess: ");
+            guess = sc.nextInt();
+
+            if (guess < number) {
+                System.out.println("Too low! Try again.");
+            } else if (guess > number) {
+                System.out.println("Too high! Try again.");
+            } else {
+                System.out.println("Super! You won the game!");
+            }
+
+        } while (guess != number);
+
+        sc.close();
+    }
+}
+
+
+
+=== Number Guessing Game ===
+Guess a number between 1 and 10!
+Enter your guess: 5
+Too low! Try again.
+Enter your guess: 8
+Too high! Try again.
+Enter your guess: 7
+Super! You won the game!
